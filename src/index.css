@@ -1,13 +1,137 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+/*font-family: 'Orbitron', sans-serif;*/
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
+}
+*{
+  box-sizing: border-box;
+}
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: azure;
+  font-family: 'Orbitron', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.myLogo{
+  width: 45px;
+  padding-right: 10px;
+}
+.pClock{
+  width: fit-content;
+  font-size: 1.6em;
+  color: #333;
+  margin: 50px auto;
+}
+.outer{
+  width: 75px;
+  height: 75px;
+  position: relative;
+  top: 20px;
+  left: 100px;
+  box-shadow: -2px -2px 8px rgba(255,255,255,1),
+              -2px -2px 12px rgba(255,255,255,0.5),
+              inset -2px -2px 4px rgba(255,255,255,0.1),
+              2px 2px 8px rgba(0,0,0,0.15);
+}
+.outer:hover{
+  box-shadow: inset -2px -2px 8px rgba(255,255,255,1),
+              inset -2px -2px 12px rgba(255,255,255,0.5),
+              inset -2px -2px 4px rgba(255,255,255,0.1),
+              inset 2px 2px 8px rgba(0,0,0,0.15);
+}
+.inner{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin: 23px;
+  background: #00FFBE;
+  clip-path: polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%, 40% 50%);
+  border: 0;
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button{
+  border: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  background: azure;
+  padding: 15px 23px;
+  outline: none;
+  font-size: 1.2em;
+  color: #00FFBE;
+  border-radius: 50px;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: -2px -2px 8px rgba(255,255,255,1),
+              -2px -2px 12px rgba(255,255,255,0.5),
+              inset -2px -2px 4px rgba(255,255,255,0.1),
+              2px 2px 8px rgba(0,0,0,0.15);
+}
+button:hover{
+  cursor: pointer;
+}
+button:active{
+  box-shadow: inset -2px -2px 8px rgba(255,255,255,1),
+              inset -2px -2px 12px rgba(255,255,255,0.5),
+              inset -2px -2px 4px rgba(255,255,255,0.1),
+              inset 2px 2px 8px rgba(0,0,0,0.15);
+}
+button:active span{
+  display: inline-block;
+  transform: scale(0.95)
+}
+button:disabled{
+  cursor: not-allowed;
+}
+
+.clock{
+  text-align: center;
+  width: 500px;
+  margin: 10px auto;
+  padding: 20px;
+}
+.titleCard, .flexer{
+  display: flex;
+  justify-content: space-around;
+}
+
+.greenBreak{
+  font-family: digital;
+  color: #00D09C;
+  font-weight: bolder;
+  font-size: 6em;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.redBreakOG{
+  color: red;
+}
+.redBreak{
+  color: red;
+  font-family: digital;
+  font-weight: bolder;
+  font-size: 6em;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+.signature{
+  text-align: center;
+}
+.signature h6{
+  display: inline-block;
+}
+.name{
+  color: #00D09C;
+  padding-left:5px;
 }
